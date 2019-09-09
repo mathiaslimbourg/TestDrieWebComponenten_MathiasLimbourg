@@ -20,7 +20,7 @@ public class testDrieServlet extends HttpServlet {
 
             HttpSession session = req.getSession(false);
             if (session!=null){
-                String name = (String) session.getAttribute(String.valueOf(false));
+                String name = (String) session.getAttribute("name");
                 out.println("Welcome " + name);
             } else {
                 req.getRequestDispatcher("/WEB-INF/login.jsp").include(req,resp);
@@ -30,7 +30,7 @@ public class testDrieServlet extends HttpServlet {
 
             req.getRequestDispatcher("/WEB-INF/welcome.jsp").forward(req,resp);
             HttpSession session = req.getSession(false);
-            String name = (String) session.getAttribute(String.valueOf(false));
+            String name = (String) session.getAttribute(String.valueOf("name"));
             session.setAttribute("name",name);
         }
 
