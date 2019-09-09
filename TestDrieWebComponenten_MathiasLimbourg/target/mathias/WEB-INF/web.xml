@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <request-character-encoding>UTF-8</request-character-encoding>
+    <response-character-encoding>UTF-8</response-character-encoding>
+
+    <servlet>
+        <display-name>testDrieServlet</display-name>
+        <servlet-name>testDrieServlet</servlet-name>
+        <servlet-class>be.intecbrussel.webcomponenten.testDrieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testDrieServlet</servlet-name>
+        <url-pattern>/testdrie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>logOutServlet</display-name>
+        <servlet-name>logOutServlet</servlet-name>
+        <servlet-class>be.intecbrussel.webcomponenten.logOutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logOutServlet</servlet-name>
+        <url-pattern>/logOutServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
